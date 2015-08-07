@@ -1,19 +1,22 @@
 //#####################################################################################
 //	Der Schrankenöffner
 //	@Autor (S)corpioN.														@DEUTSCH
-//	nul = [this, distance] execVM "autoBargate.sqf";
+//	
 //#####################################################################################
 
-hint "Schrankenscript aktiviert!";
+//hint "Schrankenscript aktiviert!";
 
+if(isServer)then{
 
 _bargate = _this select 0;
-_distance = _this select 1;
 
-_bargate animate["Door_1_rot", 0];
+//_bargate animate["Door_1_rot", 0];
 
 while{true} do{
-	if((player distance _bargate) <= _distance)then{
+    
+    _playerCount = {isPlayer _x && (_x distance _bargate) <= 10 && side _x == west} count allUnits;
+    
+	if(_playerCount >= 1)then{
 		_bargate animate["Door_1_rot", 1];
 		
 	}else{
@@ -21,4 +24,6 @@ while{true} do{
 	};
 	//hint format["%1",player distance _bargate];
 	sleep 1;
+};
+    
 };
