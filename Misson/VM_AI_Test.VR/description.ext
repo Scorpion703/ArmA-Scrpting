@@ -1,0 +1,8 @@
+respawn = base;
+
+respawndelay = 3;
+
+author="Scorpion";
+OnLoadName = "MissionTest";
+OnLoadMission = "Was soll denn hier stehen?";
+loadScreen = "images\loadScreen.jpg";

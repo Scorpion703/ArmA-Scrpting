@@ -1,0 +1,22 @@
+respawn = "BASE";
+respawndelay = 10;
+
+corpseManagerMode = 1;
+corpseLimit = 15; 
+corpseRemovalMinTime = 120; //sekunden
+corpseRemovalMaxTime = 600; // sekunden
+
+wreckManagerMode = 1;
+wreckLimit = 5;
+wreckRemovalMinTime = 120;
+wreckRemovalMaxTime = 1200;
+
+saving = 0; //deaktiviert speichern
+
+respawnTemplates[] = {"MenuInventory","MenuPosition"};
+
+author="[DS]ScorpioN.";
+
+OnLoadName = "Destroy & Conquer";
+OnLoadMission = "Destroy the enemy and conquer the Island";
+loadScreen = "images\loadScreenDC.jpg";
